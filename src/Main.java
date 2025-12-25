@@ -23,6 +23,8 @@ public class Main {
                     5. Exit
                     """);
 
+            System.out.print("Please enter your choice: ");
+
             String choice = scanner.nextLine();
 
             switch (choice) {
@@ -30,6 +32,7 @@ public class Main {
                 case "2" -> service.showAllItems();
                 case "3" -> {
                     try {
+                        System.out.print("Please insert the ID:");
                         int id = Integer.parseInt(scanner.nextLine());
                         service.markItemDone(id);
                     } catch (Exception e) {
